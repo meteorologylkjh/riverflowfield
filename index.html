@@ -1,26 +1,23 @@
-<!-- https://github.com/onaci/leaflet-velocity -->
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>LeafletVelocity Demo</title>
-    <link rel="stylesheet"
-          href="https://npmcdn.com/leaflet@1.1.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="" />
+
     <link rel="stylesheet" href="./content/demo.css" />
     <meta charset="utf-8" />
 </head>
 <body>
     <div id="map"></div>
 
-    <!--vendor-->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!--vendor <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>-->
 
-    <script src="https://npmcdn.com/leaflet@1.1.0/dist/leaflet.js"></script>
+    <script src="datas/202209032300.js"></script>
+    <script src="datas/wind-gbr-ds.js"></script>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
     <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
     <!--leaflet-velocity-->
-    <link rel="stylesheet" href="./content/leaflet-velocity.css" />
-    <script src="./script/leaflet-velocity.js"></script>
-
+    <script src="lib/leaflet-velocity/dist/leaflet-velocity-ts.js"></script>
     <!--demo-->
 
     <script src="./script/demo.js"></script>

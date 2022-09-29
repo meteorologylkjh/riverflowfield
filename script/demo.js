@@ -48,7 +48,7 @@ var map = mapStuff.map;
 var layerControl = mapStuff.layerControl;
 
 // load data (u, v grids) from somewhere (e.g. https://github.com/danwild/wind-js-server)
-$.getJSON("./datas/wind-gbr-ds.json", function (data) {
+
     let U = [];
     let V = [];
     let lat = [];
@@ -68,7 +68,7 @@ $.getJSON("./datas/wind-gbr-ds.json", function (data) {
         }
     }
     let grids = turf.featureCollection(points);
-    $.getJSON("./datas/202209032300.json", function (datas) {
+
         let sections = datas["VelDist"];
         sections.forEach((section) => {
             let points = section["VelDist"];
@@ -82,7 +82,7 @@ $.getJSON("./datas/wind-gbr-ds.json", function (data) {
             });
 
         });
-    });
+
 
     data[0].header.nx = lonNumber
     data[0].header.ny = latNumber
@@ -94,32 +94,34 @@ $.getJSON("./datas/wind-gbr-ds.json", function (data) {
     var velocityLayer = L.velocityLayer({
         displayValues: true,
         displayOptions: {
-            velocityType: "Tamsui River Flow Field",
-            position: "bottomleft",
-            emptyString: "No Flow Field data",
-            showCardinal: true
+            position: 'bottomleft',
+            emptyString: 'No velocity data',
+            angleConvention: 'bearingCW',
+            speedUnit: 'm/s',
+            showCardinal: true,
         },
         data: data,
        
-          // OPTIONAL
+        // OPTIONAL
+        particleAge: 500,
+        particleMultiplier: 0.0133,
+        particlelineWidth: 1,
+        frameRate: 100,
         minVelocity: 0,
-        maxVelocity: 10, // used to align color scale
-        velocityScale: 0.005, // modifier for particle animations, arbitrarily defaults to 0.005
-        particalAge: 100,
-        lineWidth: 2,
-        particleMultiplier: 1 / 100,
-        frameRate:20,
-        onAdd: null, // callback function
-        onRemove: null, // callback function
-        opacity: 0.97, // layer opacity, default 0.97
-
+        maxVelocity: 10,
+        velocityScale: 0.02,
+        opacity: 0.97,
+        // define your own array of hex/rgb colors
+        colorScale: [],
+        onAdd: () => console.log('onAdd'),
+        onRemove: () => console.log('onRemove'),
         // optional pane to add the layer, will be created if doesn't exist
         // leaflet v1+ only (falls back to overlayPane for < v1)
         paneName: "overlayPane",
     }).addTo(map);
 
     //layerControl.addOverlay(velocityLayer, "Wind - Great Barrier Reef");
-});
+
 
 $.getJSON("./datas/water-gbr.json", function(data) {
   var velocityLayer = L.velocityLayer({

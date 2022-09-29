@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "riverflowfield", ".", "{C5ED9050-2E4B-410C-A60B-32F10C665E0A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_62434"
+		Debug.AspNetCompiler.PhysicalPath = "..\riverflowfield\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62434\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_62434"
+		Release.AspNetCompiler.PhysicalPath = "..\riverflowfield\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62434\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "62434"
+		SlnRelativePath = "..\riverflowfield\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5ED9050-2E4B-410C-A60B-32F10C665E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5ED9050-2E4B-410C-A60B-32F10C665E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BCD2A67-06CA-4AEA-917E-29F544C51A3F}
+	EndGlobalSection
+EndGlobal
