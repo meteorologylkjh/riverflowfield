@@ -103,13 +103,13 @@ var layerControl = mapStuff.layerControl;
         data: data,
        
         // OPTIONAL
-        particleAge: 50,
+        particleAge: 20,
         particleMultiplier: 0.033,
         particlelineWidth: 1,
-        frameRate: 50,
+        frameRate: 15,
         minVelocity: 0,
         maxVelocity: 10,
-        velocityScale: 0.01,
+        velocityScale: 0.005,
         opacity: 0.97,
         // define your own array of hex/rgb colors
         colorScale: [],
